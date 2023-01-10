@@ -1,0 +1,5 @@
+<p [ngStyle]="{'background-color': getColor()}" [ngClass]="{online: serverStatus === 'online'}">
+    {{ 'Server ID' }} is {{ serverId }}, status is {{ serverStatus }} (from
+    field)
+</p>
+<p>{{ 'Server ID' }} is {{ serverId }}, status is {{ getServerStatus() }} (from function)</p>

@@ -1,0 +1,15 @@
+<button class="btn btn-primary" (click)="toggleDisplay()">
+    Display Details
+</button>
+<p *ngIf="displayText">Secret Password = tuna</p>
+<p *ngFor="let toggleLog of toggleLogs; index as i" [ngStyle]="{'background-color': getColor(i)}"
+    [ngClass]="{'white-text': i > 3}">{{ toggleLog }}</p>
+
+<hr>
+
+<label>Username:</label>
+<input type="text" class="form-control" (input)="onUpdateUsername($event)" [(ngModel)]="username">
+<p>{{ username }}</p>
+<button class="btn btn-primary" [disabled]="emptyString" (click)="onButtonClick()">
+    Reset User
+</button>
